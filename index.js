@@ -1,4 +1,4 @@
-require('dotenv').config({silent: true})
+require('dotenv').config({ silent: true })
 const express = require('express')
 const simpleOauthModule = require('simple-oauth2')
 const randomstring = require('randomstring')
@@ -102,7 +102,7 @@ app.get('/success', (req, res) => {
 
 app.get('/', (req, res) => {
   res.send(`Hello<br>
-    <a href="/auth" target="${loginAuthTarget}">
+    <a href="${app.mountpat}/auth" target="${loginAuthTarget}">
       Log in with ${oauthProvider.toUpperCase()}
     </a>`)
 })
