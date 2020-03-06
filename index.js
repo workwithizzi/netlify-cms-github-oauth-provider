@@ -102,11 +102,13 @@ app.get('/success', (req, res) => {
 
 app.get('/', (req, res) => {
   res.send(`Hello<br>
-    <a href="${app.mountpat}/auth" target="${loginAuthTarget}">
+    <a href="/auth" target="${loginAuthTarget}">
       Log in with ${oauthProvider.toUpperCase()}
     </a>`)
 })
 
-app.listen(port, () => {
-  console.log("gandalf is walkin' on port " + port)
-})
+// app.listen(port, () => {
+//   console.log("gandalf is walkin' on port " + port)
+// })
+
+module.exports = app;
